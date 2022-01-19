@@ -19,6 +19,7 @@ async function main() {
     // Passed to --extensionTestsPath
     const extensionTestsPath = path.resolve(__dirname, "./suite/index");
 
+<<<<<<< HEAD
     // NB: We include the exact version here instead of in `test.yml` so that
     // we don't have to update the branch protection rules every time we bump
     // the legacy VSCode version.
@@ -26,6 +27,12 @@ async function main() {
     const vscodeExecutablePath = await downloadAndUnzipVSCode(vscodeVersion);
     const [cli, ...args] =
       resolveCliArgsFromVSCodeExecutablePath(vscodeExecutablePath);
+=======
+    // This version should match package.json engines.vscode
+    const vscodeExecutablePath = await downloadAndUnzipVSCode('1.58.1');
+    const cliPath =
+      resolveCliPathFromVSCodeExecutablePath(vscodeExecutablePath);
+>>>>>>> 7c4b88038 (vscode ^1.61.0 changed to ~1.58.0)
 
     // Install extension dependencies
     cp.spawnSync(
