@@ -191,4 +191,5 @@ const textFragmentExtractors: Record<
     "xml",
     htmlStringTextFragmentExtractor
   ),
+  "objective-cpp": constructDefaultTextFragmentExtractor("objective-cpp"),
 };

@@ -20,6 +20,7 @@ export const supportedLanguageIds = [
   "typescript",
   "typescriptreact",
   "xml",
+  "objective-cpp"
 ] as const;
 
 export type SupportedLanguageId = typeof supportedLanguageIds[number];

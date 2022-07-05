@@ -21,6 +21,7 @@ import scala from "./scala";
 import { patternMatchers as scss } from "./scss";
 import go from "./go";
 import { patternMatchers as ruby } from "./ruby";
+import objectivecpp from "./objectivecpp";
 import { UnsupportedLanguageError } from "../errors";
 import { SupportedLanguageId } from "./constants";
 
@@ -73,6 +74,7 @@ const languageMatchers: Record<
   typescript,
   typescriptreact: typescript,
   xml: html,
+  "objective-cpp": objectivecpp,
 };
 
 function matcherIncludeSiblings(matcher: NodeMatcher): NodeMatcher {
